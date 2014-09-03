@@ -28,6 +28,8 @@
 						$prefix = "control-panel";
 					} elseif (file_exists("system/")) {
 						$prefix = "system";
+					} else {
+						echo "Control panel folder not found";
 					}
 
 					if (file_exists($prefix . '/')) {
@@ -44,7 +46,7 @@
 						setPermissions("images/signature_attachments/", 777);
 						setPermissions("images/uploads/", 777);
 					} else {
-						echo "Control panel folder not found";
+						echo "A strange error has occoured somewhere between line 27 and 33";
 					}
 				?>
 			</tbody>
